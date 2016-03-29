@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B4F2DD2F1C82057300035E08 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4F2DD2E1C82057300035E08 /* main.cpp */; };
+		B4F2DD371C82076B00035E08 /* Database.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4F2DD351C82076B00035E08 /* Database.cpp */; };
+		B4F2DD3A1C82079400035E08 /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4F2DD381C82079400035E08 /* Engine.cpp */; };
+		B4F2DD3D1C8207DE00035E08 /* Fileloader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4F2DD3B1C8207DE00035E08 /* Fileloader.cpp */; };
+		B4F2DD401C820C2600035E08 /* Util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4F2DD3E1C820C2600035E08 /* Util.cpp */; };
+		B4F2DD431C820E3F00035E08 /* Posting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4F2DD411C820E3F00035E08 /* Posting.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,16 @@
 /* Begin PBXFileReference section */
 		B4F2DD2B1C82057300035E08 /* Wikipedia Search Engine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Wikipedia Search Engine"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F2DD2E1C82057300035E08 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B4F2DD351C82076B00035E08 /* Database.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Database.cpp; sourceTree = "<group>"; };
+		B4F2DD361C82076B00035E08 /* Database.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Database.hpp; sourceTree = "<group>"; };
+		B4F2DD381C82079400035E08 /* Engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Engine.cpp; sourceTree = "<group>"; };
+		B4F2DD391C82079400035E08 /* Engine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Engine.hpp; sourceTree = "<group>"; };
+		B4F2DD3B1C8207DE00035E08 /* Fileloader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Fileloader.cpp; sourceTree = "<group>"; };
+		B4F2DD3C1C8207DE00035E08 /* Fileloader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Fileloader.hpp; sourceTree = "<group>"; };
+		B4F2DD3E1C820C2600035E08 /* Util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Util.cpp; sourceTree = "<group>"; };
+		B4F2DD3F1C820C2600035E08 /* Util.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Util.hpp; sourceTree = "<group>"; };
+		B4F2DD411C820E3F00035E08 /* Posting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Posting.cpp; sourceTree = "<group>"; };
+		B4F2DD421C820E3F00035E08 /* Posting.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Posting.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,16 @@
 			isa = PBXGroup;
 			children = (
 				B4F2DD2E1C82057300035E08 /* main.cpp */,
+				B4F2DD351C82076B00035E08 /* Database.cpp */,
+				B4F2DD361C82076B00035E08 /* Database.hpp */,
+				B4F2DD381C82079400035E08 /* Engine.cpp */,
+				B4F2DD391C82079400035E08 /* Engine.hpp */,
+				B4F2DD3B1C8207DE00035E08 /* Fileloader.cpp */,
+				B4F2DD3C1C8207DE00035E08 /* Fileloader.hpp */,
+				B4F2DD3E1C820C2600035E08 /* Util.cpp */,
+				B4F2DD3F1C820C2600035E08 /* Util.hpp */,
+				B4F2DD411C820E3F00035E08 /* Posting.cpp */,
+				B4F2DD421C820E3F00035E08 /* Posting.hpp */,
 			);
 			path = "Wikipedia Search Engine";
 			sourceTree = "<group>";
@@ -118,6 +143,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F2DD371C82076B00035E08 /* Database.cpp in Sources */,
+				B4F2DD3A1C82079400035E08 /* Engine.cpp in Sources */,
+				B4F2DD3D1C8207DE00035E08 /* Fileloader.cpp in Sources */,
+				B4F2DD401C820C2600035E08 /* Util.cpp in Sources */,
+				B4F2DD431C820E3F00035E08 /* Posting.cpp in Sources */,
 				B4F2DD2F1C82057300035E08 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +237,11 @@
 		B4F2DD331C82057300035E08 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				OTHER_LDFLAGS = (
+					"-lexpat",
+					"-lsqlite3",
+					"-v",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -214,6 +249,11 @@
 		B4F2DD341C82057300035E08 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				OTHER_LDFLAGS = (
+					"-lexpat",
+					"-lsqlite3",
+					"-v",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
