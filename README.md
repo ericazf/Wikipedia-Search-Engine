@@ -2,7 +2,7 @@
 ---
 小型搜索引擎实现版本，暂无进行索引压缩，主要用于展示搜索引擎的基本原理。采用XCode编写。
 
-测试版本，需要自行编译，默认对前1000个词条建立倒排索引。
+测试版本，需要自行编译，在项目Linking-Other Linker Flags中添加-lexpat -lsqlite3，默认对前1000个词条建立倒排索引。
 
 ####依赖：
 
@@ -22,16 +22,19 @@
 ####演示（内存缓存文档数阈值16384）
 #####1. 对前1000个词条建立倒排索引
 ![](http://7fvfml.com1.z0.glb.clouddn.com/wiki.png)
+
 分词+建立索引大概22s，把内存索引合并到数据库上大概5s
 
 #####2. 对前10000个词条建立倒排索引
 ![](http://7fvfml.com1.z0.glb.clouddn.com/wiki2.png)
+
 分词+建立索引大概119s，合并到数据库上大概17s
 
 #####3. 搜索(样本为2建立的倒排索引数据库)
 ![](http://7fvfml.com1.z0.glb.clouddn.com/wiki3.png)
 
 ![](http://7fvfml.com1.z0.glb.clouddn.com/wiki4.png)
+
 结果有665个文档，搜索时间为0.01s
 
 
