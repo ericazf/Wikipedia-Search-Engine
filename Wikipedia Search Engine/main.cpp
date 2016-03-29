@@ -26,13 +26,13 @@ int main(int argc, const char * argv[]) {
      */
     std::string db_path = "";
     std::string xml_path = "";
-    int max_doc_count = 1000;
+    int max_doc_count = 10000;
     std::string doc_encoding = "UTF-8";
     Engine engine(xml_path,doc_encoding,max_doc_count,db_path);
     engine.create_inverted_index();
     
 //    Engine engine(db_path);
-//    string query = "哲学";
+//    string query = "数学";
 //    engine.search(query);
     return 0;
 }
